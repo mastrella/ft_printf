@@ -64,5 +64,3 @@ fclean: clean
 	/bin/rm -rf $(NAME)
 
 re: fclean all
-
-# gcc -Wall -Wextra -Werror -c libft/libft.a $(OBJ) -I $(INCDIR) -o $(NAME)
