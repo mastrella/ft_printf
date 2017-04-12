@@ -82,7 +82,6 @@ int handle_num(char *curr_arg, t_format flags, const char *format, int ret)
 	}
 	if (*format != 'u' && zero_just == 0)
 	{
-		//put curr_arg != 0 here
 		if (curr_arg[0] == '-')
 		{
 			ret += write(1, "-", 1);
@@ -95,7 +94,7 @@ int handle_num(char *curr_arg, t_format flags, const char *format, int ret)
 			else if (flags.space == 1)
 				ret += write(1, " ", 1);
 		}
-		if (flags.num == 1 && (curr_arg[0] != '0' || ((*format == 'o' || *format == 'O') 
+		if (flags.num == 1 && (curr_arg[0] != '0' || ((*format == 'o' || *format == 'O')
 						&& curr_arg[0] == '0' && flags.precision == 1 && flags.precision_value == 0)))
 			ret = print_hash(format, ret);
 	}

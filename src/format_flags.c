@@ -36,7 +36,7 @@ void prepare_format(t_format  *flags)
 int observe_prec_width(const char *format, t_format *flags, int i, va_list *ap, int moved)
 {
 	char  tmp[22]; //free?
-	
+
 	ft_bzero(tmp, 22);
 	if (*format == '.')
 	{
@@ -83,13 +83,15 @@ int observe_prec_width(const char *format, t_format *flags, int i, va_list *ap, 
       format--;
 	    moved--;
   }
-//  else
-//  {
-//    ft_putstr("\e[033Sorry, I don't handle conversion character ");
-//    ft_putchar(*format + 1);
-//    ft_putstr("\e[031\n");
-//    moved++;
-//  }
+/*
+ else
+ {
+   ft_putstr("\e[033Sorry, I don't handle conversion character ");
+   ft_putchar(*format + 1);
+   ft_putstr("\e[031\n");
+   moved++;
+ }
+*/
 	return (moved);
 }
 
@@ -160,11 +162,13 @@ int observe_format(const char *format, t_format *flags, va_list *ap)
       && *format != 'u' && *format != 'U' && *format != 'x' && *format != 'X'
       && *format != 'c' && *format != 'C' && *format != '%' && *format != '\0')
   {
-//    if (*format == '\0')
-//    {
-//      ft_putstr("\e[033Error, missing conversion character.\e[031");
-//      return (0); //end printf function.
-//    }
+/*
+   if (*format == '\0')
+   {
+     ft_putstr("\e[033Error, missing conversion character.\e[031");
+     return (0); //end printf function.
+   }
+*/
     curr_move = observe_flags(format, flags, ap, 0);
     moved += curr_move;
     format += curr_move;
