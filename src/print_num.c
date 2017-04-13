@@ -102,6 +102,23 @@ int	print_num(const char *format, va_list *ap, t_format flags, int ret)
 		else
 			arg = ft_uitoa_base(va_arg(*ap, unsigned int), 16, 1);
 	}
+	else if (*format == 'b')
+	{
+		if (flags.hh == 1)
+			arg = ft_uitoa_base((unsigned char)(va_arg(*ap, int)), 2, 1);
+		else if (flags.h == 1)
+			arg = ft_uitoa_base((unsigned short int)(va_arg(*ap, int)), 2, 1);
+		else if (flags.l == 1)
+			arg = ft_uitoa_base(va_arg(*ap, unsigned long int), 2, 1);
+		else if (flags.ll == 1)
+			arg = ft_uitoa_base(va_arg(*ap, unsigned long long int), 2, 1);
+		else if (flags.j == 1)
+			arg = ft_uitoa_base(va_arg(*ap, uintmax_t), 2, 1);
+		else if (flags.z == 1)
+			arg = ft_uitoa_base(va_arg(*ap, size_t), 2, 1);
+		else
+			arg = ft_uitoa_base(va_arg(*ap, unsigned int), 2, 1);
+	}
 	ret = handle_num(arg, flags, format, ret);
 	return (ret);
 }

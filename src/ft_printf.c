@@ -22,7 +22,7 @@ int	invocate_args(const char *format, va_list *ap, t_format flags, int ret)
 		ret = print_p(va_arg(*ap, void*), flags, ret);
 	else if (*format == 'o' || *format == 'O' || *format == 'u' || *format == 'U'
 				|| *format == 'x' || *format == 'X' || *format == 'd' || *format == 'D'
-				|| *format == 'i')
+				|| *format == 'i' || *format == 'b')
 				{
 						ret = print_num(format, ap, flags, ret);
 				}
