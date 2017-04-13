@@ -68,6 +68,7 @@ int		print_c(int character, t_format flags, int ret);
 int		print_s(char *s, t_format flags, int ret);
 int		print_p(void *pointer, t_format flags, int ret);
 int		print_num(const char *format, va_list *ap, t_format flags, int ret);
+void  print_n(int *written, int ret);
 int		print_percent(t_format flags, int ret);
 
 

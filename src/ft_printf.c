@@ -26,6 +26,8 @@ int	invocate_args(const char *format, va_list *ap, t_format flags, int ret)
 				{
 						ret = print_num(format, ap, flags, ret);
 				}
+	else if (*format == 'n')
+		print_n(va_arg(*ap, int*), ret);
 	else if (*format == '%')
 		ret = print_percent(flags, ret);
 	return (ret);

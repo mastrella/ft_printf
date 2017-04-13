@@ -159,7 +159,8 @@ int observe_format(const char *format, t_format *flags, va_list *ap)
   while (*format != 's' && *format != 'S' && *format != 'p' && *format != 'i'
       && *format != 'd' && *format != 'D' && *format != 'o' && *format != 'O'
       && *format != 'u' && *format != 'U' && *format != 'x' && *format != 'X'
-      && *format != 'c' && *format != 'C' && *format != '%' && *format != '\0')
+      && *format != 'c' && *format != 'C' && *format != '%' && *format != 'n'
+      && *format != '\0')
   {
 /*
    if (*format == '\0')
