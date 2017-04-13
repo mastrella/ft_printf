@@ -65,7 +65,7 @@ int		observe_prec_width(const char *format, t_format *flags, int i, va_list *ap,
 /*  print arguments  */
 int		invocate_args(const char *format, va_list *ap, t_format flags, int ret);
 int		print_c(int character, t_format flags, int ret);
-// int		print_wide_c(wint_t character, t_format flags, int ret);
+int		print_wide_c(wint_t character, t_format flags, int ret);
 int		print_s(char *s, t_format flags, int ret);
 int		print_p(void *pointer, t_format flags, int ret);
 int		print_num(const char *format, va_list *ap, t_format flags, int ret);
