@@ -23,7 +23,7 @@ int	print_num(const char *format, va_list *ap, t_format flags, int ret)
 			arg = ft_itoa_base((signed char)(va_arg(*ap, int)), 10, 0);
 		else if (flags.h == 1)
 			arg = ft_itoa_base((short int)(va_arg(*ap, int)), 10, 0);
-		else if (flags.l == 1)
+		else if (flags.l == 1 || *format == 'D')
 			arg = ft_itoa_base(va_arg(*ap, long int), 10, 0);
 		else if (flags.ll == 1)
 			arg = ft_itoa_base(va_arg(*ap, long long int), 10, 0);
@@ -40,7 +40,7 @@ int	print_num(const char *format, va_list *ap, t_format flags, int ret)
 			arg = ft_uitoa_base((unsigned char)(va_arg(*ap, int)), 10, 0);
 		else if (flags.h == 1)
 			arg = ft_uitoa_base((unsigned short int)(va_arg(*ap, int)), 10, 0);
-		else if (flags.l == 1)
+		else if (flags.l == 1 || *format == 'U')
 			arg = ft_uitoa_base(va_arg(*ap, unsigned long int), 10, 0);
 		else if (flags.ll == 1)
 			arg = ft_uitoa_base(va_arg(*ap, unsigned long long int), 10, 0);

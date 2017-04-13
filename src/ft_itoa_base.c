@@ -33,7 +33,7 @@ char			*ft_itoa_base(intmax_t n, int base, int upper)
 	uintmax_t	mod;
 	char	*value;
 	char  hex[17];
-	
+
 	if (upper == 1)
 		ft_strcpy(hex, "0123456789ABCDEF");
 	else
