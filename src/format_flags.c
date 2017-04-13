@@ -35,7 +35,7 @@ void prepare_format(t_format  *flags)
 
 int observe_prec_width(const char *format, t_format *flags, int i, va_list *ap, int moved)
 {
-	char  tmp[22]; //free?
+	char  tmp[22];
 
 	ft_bzero(tmp, 22);
 	if (*format == '.')
@@ -63,17 +63,16 @@ int observe_prec_width(const char *format, t_format *flags, int i, va_list *ap, 
 		format--;
 		moved--;
 	}
-	else if ((*format >= '0' && *format <= '9') || *format == '*')
+  else if (*format == '*')
+  {
+    flags->width = 1;
+    flags->width_arg = 1;
+    flags->width_value = va_arg(*ap, int);
+  }
+	else if (*format >= '0' && *format <= '9')
   {
       flags->width = 1;
-      if (*format == '*')
-      {
-        flags->width_arg = 1;
-        flags->width_value = va_arg(*ap, int);
-        format++;
-		    moved++;
-      }
-      else while (*format >= '0' && *format <= '9')
+      while (*format >= '0' && *format <= '9')
       {
 		      tmp[i++] = *format;
 		      format++;
