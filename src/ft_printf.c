@@ -16,9 +16,9 @@ int	invocate_args(const char *format, va_list *ap, t_format flags, int ret)
 {
 	if (*format == 'c' || *format == 'C')
 	{
-		if (flags.l == 1 || *format == 'C')
-			ret = print_wide_c((va_arg(*ap, wint_t)), flags, ret);
-		else
+		// if (flags.l == 1 || *format == 'C')
+		// 	ret = print_wide_c((va_arg(*ap, wint_t)), flags, ret);
+		// else
 			ret = print_c((va_arg(*ap, int)), flags, ret);
 	}
 	else if (*format == 's' || *format == 'S')
