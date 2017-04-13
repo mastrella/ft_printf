@@ -24,7 +24,7 @@ char			*ft_uitoa_base(uintmax_t n, int base, int upper)
 	else
 		ft_strcpy(hex, "0123456789abcdef");
 	mod = n;
-	len = ft_ilength(n, base);
+	len = ft_uilength(n, base);
 	value = ft_strnew(len);
 	if (!value)
 		return (NULL);
