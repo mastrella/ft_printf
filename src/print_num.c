@@ -103,6 +103,5 @@ int	print_num(const char *format, va_list *ap, t_format flags, int ret)
 			arg = ft_uitoa_base(va_arg(*ap, unsigned int), 16, 1);
 	}
 	ret = handle_num(arg, flags, format, ret);
-	free(arg);
 	return (ret);
 }
