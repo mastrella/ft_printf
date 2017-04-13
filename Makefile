@@ -21,6 +21,7 @@ SRC		=	ft_printf.c \
 			print_c.c \
 			print_num.c \
 			print_p.c \
+			print_n.c \
 			print_percent.c \
 			print_padding.c \
 			print_s.c \
