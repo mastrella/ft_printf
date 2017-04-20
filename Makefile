@@ -16,10 +16,12 @@ CFLAGS	= gcc -Wall -Wextra -Werror
 
 SRC		=	ft_printf.c \
 			format_flags.c \
+			format_flag_helper.c \
 			ft_ilength.c \
 			handle_num.c \
 			print_c.c \
 			print_num.c \
+			int_to_a.c \
 			print_p.c \
 			print_n.c \
 			print_percent.c \

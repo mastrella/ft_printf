@@ -6,18 +6,18 @@
 /*   By: mmastrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 00:13:55 by mmastrel          #+#    #+#             */
-/*   Updated: 2017/03/20 00:50:08 by mmastrel         ###   ########.fr       */
+/*   Updated: 2017/04/19 01:33:21 by mmastrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int ft_putstrn(char *s, int n)
+int	ft_putstrn(char *s, int n)
 {
-  int i;
+	int	i;
 
-  i = 0;
-  while (i < n)
-    ft_putchar(s[i]);
-  return (i + 1);
+	i = 0;
+	while (i < n)
+		ft_putchar(s[i]);
+	return (i + 1);
 }

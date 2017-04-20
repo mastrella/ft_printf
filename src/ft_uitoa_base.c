@@ -6,21 +6,21 @@
 /*   By: mmastrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 00:13:55 by mmastrel          #+#    #+#             */
-/*   Updated: 2017/03/20 00:50:08 by mmastrel         ###   ########.fr       */
+/*   Updated: 2017/04/19 01:35:45 by mmastrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-char			*ft_uitoa_base(uintmax_t n, int base, int upper)
+char	*ft_uitoa_base(uintmax_t n, int base, int upper)
 {
-	size_t	len;
+	size_t		len;
 	uintmax_t	mod;
-	char	*value;
-	char  hex[17];
+	char		*value;
+	char		hex[17];
 
-  if (upper == 1)
-    ft_strcpy(hex, "0123456789ABCDEF");
+	if (upper == 1)
+		ft_strcpy(hex, "0123456789ABCDEF");
 	else
 		ft_strcpy(hex, "0123456789abcdef");
 	mod = n;

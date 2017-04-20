@@ -6,7 +6,7 @@
 /*   By: mmastrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 22:50:38 by mmastrel          #+#    #+#             */
-/*   Updated: 2017/03/18 01:23:47 by mmastrel         ###   ########.fr       */
+/*   Updated: 2017/04/19 01:17:37 by mmastrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_ilength(intmax_t n, int base)
 {
-	intmax_t mod;
-	int	len;
+	intmax_t	mod;
+	int			len;
 
 	mod = n;
 	len = 0;
@@ -31,8 +31,8 @@ int	ft_ilength(intmax_t n, int base)
 
 int	ft_uilength(uintmax_t n, int base)
 {
-	uintmax_t mod;
-	int	len;
+	uintmax_t	mod;
+	int			len;
 
 	mod = n;
 	len = 0;

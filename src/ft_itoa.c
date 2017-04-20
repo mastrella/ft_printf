@@ -6,7 +6,7 @@
 /*   By: mmastrel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 07:19:16 by mmastrel          #+#    #+#             */
-/*   Updated: 2017/03/20 00:51:50 by mmastrel         ###   ########.fr       */
+/*   Updated: 2017/04/19 01:18:24 by mmastrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	int_len(int n)
 	return (len);
 }
 
-static int		ft_isnegative(long mod)
+static int	ft_isnegative(long mod)
 {
 	size_t	neg;
 
@@ -43,7 +43,7 @@ static int		ft_isnegative(long mod)
 	return (neg);
 }
 
-char			*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	size_t	len;
 	size_t	neg;
